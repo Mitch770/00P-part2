@@ -80,7 +80,7 @@ class Book
         end
     end
 
-    def create.self
+    def self.create
         new_book = Book.new 
         @@on_shelf.push(new_book)
         return new_book
@@ -90,20 +90,20 @@ class Book
         #return books that were taken out today
     end
 
-    def overdue_books.self
+    def self.overdue_books
         
     end
 
-    def browse.self(account)
+    def self.browse(account)
         random_book = @@on_shelf.sample(rand(@@on_shelf.count))
         return random_book
     end
 
-    def available.self
+    def self.available
         @@on_shelf
     end
 
-    def borrowed.self
+    def self.borrowed
         @@on_loan
     end
 end
